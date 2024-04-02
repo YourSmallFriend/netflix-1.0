@@ -20,11 +20,11 @@ video{
 }
 
 .wrapper:first-child {
-    top: 20vh !important;
+    top: 50vh !important;
 }
 
 .wrapper:nth-child(2) {
-    top: 105vh !important;
+    top: 135vh !important;
 }
 
 .wrapper i {
@@ -64,7 +64,26 @@ video{
 /* .carousel::-webkit-scrollbar { */
     /* display: none !important; */
 /* S} */
-
+/* Track */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #585858;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(112, 112, 112);
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #333333;
+  }
+  
 .carousel :where(.card, .img) {
     display: flex !important;
     align-items: center !important;
