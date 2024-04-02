@@ -46,10 +46,14 @@
       </nav>
     
       <!--video/trailer-->
-     <div class="VidPlayer">
-        <video autoplay muted loop src="video/Breaking Bad Trailer [HD].mp4"></video>
-      </div>
-    
+    <div class="VidPlayer">
+        <video autoplay controls muted loop id="myVideo">
+            <source src="video/Breaking Bad Trailer [HD].mp4" type="video/mp4">
+        </video>
+        <button><a href="geluid"onclick="toggleMute()"></a></button>
+        
+    </div>
+      
       <!--slider in prgress-->
     <div class="body2 bg-dark">
         <div class="wrapper bg-dark">  
@@ -151,7 +155,20 @@
                 </li> 
             </ul> 
         </div> 
-    </div> 
+    </div>
+        <script>
+            var x = document.getElementById("myVideo");
+            var isMuted = true;
+        
+            function toggleMute() {
+                if (isMuted) {
+                    x.volume = 1.0; // Unmute
+                } else {
+                    x.volume = 0.0; // Mute
+                }
+                isMuted = !isMuted; // Toggle mute state
+            }
+        </script> 
     </body>
 </div>
 </html>
