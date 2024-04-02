@@ -8,7 +8,6 @@ video{
     justify-content: center !important;
     min-height: 100vh !important;
     padding: 0 35px !important;
-    background: rgb(228, 220, 220) !important;
 }
 
 .wrapper {
@@ -53,8 +52,8 @@ video{
 .wrapper .carousel {
     display: grid !important;
     grid-auto-flow: column !important;
-    grid-auto-columns: calc((100% / 3) - 12px) !important;
-    gap: 16px !important;
+    grid-auto-columns: calc((100% / 4) - 12px) !important;
+    gap: 8px !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
     scroll-behavior: smooth !important;
