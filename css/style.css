@@ -93,7 +93,7 @@ video{
   ::-webkit-scrollbar-track {
     background: #333333;
   }
-  
+
 .carousel :where(.card, .img) {
     display: flex !important;
     align-items: center !important;
