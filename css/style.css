@@ -1,5 +1,9 @@
 video{
-    width: 100%;
+    width: 72.5%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    top: 0px !important;
 }
 .body2 {
     position: relative !important;
@@ -8,6 +12,13 @@ video{
     justify-content: center !important;
     min-height: 100vh !important;
     padding: 0 35px !important;
+}
+
+.navbar{
+    background-color: none !important;
+    position: sticky !important;
+    top: 0px !important;
+    z-index: 1 !important;
 }
 
 .wrapper {
@@ -155,4 +166,19 @@ video{
     .wrapper .carousel {
         grid-auto-columns: 100% !important;
     }
+}
+/*  de after voegt een extra element toe zodat je geen leeg div-je hebt voor alleen clear float*/
+.content:after {
+    visibility: hidden !important;
+    display: block !important;
+    font-size: 0 !important;
+    content: " " !important;
+    clear: both !important;
+    height: 0 !important;
+    } .content {
+    display: inline-block !important;
+    } 
+    html{
+    .content { height: 1% !important; }
+    .content { display: block !important; }
 }
