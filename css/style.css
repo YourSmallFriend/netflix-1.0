@@ -13,14 +13,12 @@ video{
     min-height: 100vh !important;
     padding: 0 35px !important;
 }
-
 .navbar{
     background-color: none !important;
     position: sticky !important;
     top: 0px !important;
     z-index: 1 !important;
 }
-
 .wrapper {
     max-width: 1100px !important;
     width: 100% !important;
