@@ -1,6 +1,132 @@
 video{
     width: 100%;
 }
-.slider{
-    top: 10px !important;
+.body2 { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    padding: 0 35px; 
+    background: rgb(228, 220, 220); 
+} 
+.wrapper { 
+    max-width: 1100px !important; 
+    width: 100% !important; 
+    position: relative !important; 
+  
+} 
+  
+.wrapper i { 
+    height: 50px !important; 
+    width: 50px !important; 
+    background: rgb(118, 233, 118) !important; 
+    text-align: center !important; 
+    line-height: 50px !important; 
+    border-radius: 50% !important; 
+    cursor: pointer !important; 
+    position: absolute !important; 
+    top: 50% !important; 
+    font-size: 1.25 rem !important; 
+    transform: translateY(-50%) !important; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23) !important; 
+  
+} 
+  
+.wrapper i:first-child { 
+    left: -22px !important; 
+  
+} 
+  
+.wrapper i:last-child { 
+    right: -22px !important; 
+  
+} 
+  
+.wrapper .carousel { 
+    display: grid !important; 
+    grid-auto-flow: column !important; 
+    grid-auto-columns: calc((100% / 3) - 12px) !important; 
+    gap: 16px !important; 
+    overflow-x: auto !important; 
+    scroll-snap-type: x mandatory !important; 
+    scroll-behavior: smooth !important; 
+    scrollbar-width: 0 !important; 
+} 
+  
+.carousel::-webkit-scrollbar { 
+    display: none !important; 
+} 
+  
+.carousel :where(.card, .img) { 
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+} 
+  
+.carousel.dragging { 
+    scroll-snap-type: none !important; 
+    scroll-behavior: auto !important; 
+} 
+  
+.carousel.no-transition { 
+    scroll-behavior: auto !important; 
+} 
+  
+.carousel.dragging .card { 
+    cursor: grab !important; 
+    user-select: none !important; 
+} 
+  
+.carousel .card { 
+    scroll-snap-align: start !important; 
+    height: 500px !important; 
+    list-style: none !important; 
+    background: #fff !important; 
+    border-radius: 8px !important; 
+    display: flex !important; 
+    cursor: pointer !important; 
+    width: 98% !important; 
+    padding-bottom: 15px !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+    flex-direction: column !important; 
+} 
+  
+.card .img {  
+    width: 145px !important; 
+    height: 145px !important; 
+  
+} 
+  
+.card .img img { 
+    width: 140px !important; 
+    height: 140px !important; 
+    object-fit: cover !important; 
+    border: 4px solid #fff !important; 
+} 
+  
+.card h2 { 
+    font-weight: 500 !important; 
+    font-size: 1.56rem !important; 
+    margin: 30px 0 5px !important; 
+} 
+  
+.card span { 
+    color: #6a6d78 !important; 
+    font-size: 1.31rem !important; 
+  
+} 
+  
+@media screen and (max-width: 900px) { 
+    .wrapper .carousel { 
+        grid-auto-columns: calc((100% / 2) - 9px) !important; 
+  
+    } 
+} 
+  
+@media screen and (max-width: 600px) { 
+    .wrapper .carousel { 
+        grid-auto-columns: 100% !important; 
+  
+    } 
 }
