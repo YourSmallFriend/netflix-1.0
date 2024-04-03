@@ -3,7 +3,6 @@ video{
     height: auto;
     display: block;
     margin: 0 auto;
-    top: 0px !important;
 }
 .body2 {
     position: relative !important;
@@ -19,7 +18,16 @@ video{
     top: 0px !important;
     z-index: 1 !important;
 }
+.collapse{
+    margin-left: 20px !important;
+}
 .nav-link{
+    color: rgb(141, 141, 141) !important;
+}
+.nav-link:hover{
+    color: rgb(255, 255, 255) !important;
+}
+h2{
     color: white !important;
 }
 .wrapper {
@@ -71,36 +79,23 @@ video{
     scroll-behavior: smooth !important;
     scrollbar-width: 0 !important;
 }
-
-/* .carousel::-webkit-scrollbar { */
-    /* display: none !important; */
-/* S} */
-/* Track */
 ::-webkit-scrollbar {
     width: 20px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-thumb {
     background: #585858;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+::-webkit-scrollbar-thumb:hover {
     background: rgb(112, 112, 112);
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+::-webkit-scrollbar-track {
     background: #333333;
-  }
-
+}
 .carousel :where(.card, .img) {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-}
-
+} 
 .carousel.dragging {
     scroll-snap-type: none !important;
     scroll-behavior: auto !important;
