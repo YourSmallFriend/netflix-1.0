@@ -4,6 +4,15 @@ video{
     display: block;
     margin: 0 auto;
 }
+.desc{
+    color: white !important;
+    font-size: calc(12px + 0.70vw) !important;
+}
+.BreakingBad{
+    position: relative !important;
+    bottom: 25vh;
+    left: 15vw;
+}
 .body2 {
     position: relative !important;
     display: flex !important;
