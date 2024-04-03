@@ -30,7 +30,7 @@
             <a class="nav-link" href="#movies">Movies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="new&Popular.html">New & Popular</a>
+            <a class="nav-link" href="#newandpopular">New & Popular</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="myList.html">My List</a>
@@ -48,7 +48,7 @@
     <!--<button id="audio-control" class="btn btn-primary">Mute</button>-->
 </div>
   <!--slider in progress-->
-  <div class="body2 bg-dark">
+<div class="body2 bg-dark">
     <div class="wrapper bg-dark">
         <h1>Movies</h1>  
         <ul class="carousel" id="movies">
@@ -150,6 +150,57 @@
             </li> 
         </ul> 
     </div> 
+    <div class="wrapper mt-3 bg-dark">
+        <br>
+        <h1>New And Popular</h1>
+        <ul class="carousel" id="newandpopular"> 
+            <li class="card"> 
+                <div class="img"><img src= "img/avatar.jpg" alt="" draggable="false"> </div> 
+                <h2 class="avatar" style="color: green; font-weight:bold;">Avatar: The last Airbender</h2> 
+                <span>In a war-torn world of elemental powers, a young boy reawakens...</span> 
+            </li> 
+            <li class="card"> 
+                <div class="img"><img src= "img/images.jpg" alt="" draggable="false"> </div> 
+                <h2 style="color: green; font-weight:bold;">Better Call Saul</h2> 
+                <span>The trials and tribulations of criminal lawyer Jimmy McGill in the years...</span> 
+            </li>
+            <li class="card"> 
+                <div class="img"><img src= "img/RickAndMorty.jpg" alt="" draggable="false"> </div> 
+                <h2 style="color: green; font-weight:bold;">Rick And Morty</h2> 
+                <span>The fractured domestic lives of a nihilistic mad scientist and his anxious...</span> 
+            </li> 
+            <li class="card"> 
+                <div class="img"><img src= "img/Office.jpg" alt="" draggable="false"> </div> 
+                <h2 style="color: green; font-weight:bold;">The Office</h2> 
+                <span>A mockumentary on a group of typical office workers...</span> 
+            </li> 
+            <li class="card"> 
+                <div class="img"><img src= "img/Sheldon.jpg" alt="" draggable="false"> </div> 
+                <h2 style="color: green; font-weight:bold;">Young Sheldon</h2> 
+                <span>Meet a child genius named Sheldon Cooper already...</span> 
+            </li> 
+            <li class="card"> 
+                <div class="img"><img src= "img/Silicon.jpg" alt="" draggable="false"> </div> 
+                <h2 style="color: green; font-weight:bold;">Silicon Valley</h2> 
+                <span>Follows the struggle of Richard Hendricks, a Silicon Valley...</span> 
+            </li> 
+            <li class="card"> 
+                <div class="img"><img src= "img/ShutUpfatass.jpg" alt="" draggable="false"> </div> 
+                <h2 style="color: green; font-weight:bold;">South Park</h2> 
+                <span>Follows the misadventures of four irreverent grade-schoolers...</span> 
+            </li>
+            <li class="card"> 
+                <div class="img"><img src= "img/breaking_bad-504442815-mmed.jpg" alt="" draggable="false"> </div> 
+                <h2 style="color: green; font-weight:bold;">Breaking Bad</h2> 
+                <span>A chemistry teacher diagnosed with inoperable lung cancer...</span> 
+            </li>  
+            <li class="card"> 
+                <div class="img"><img src= "img/heylois.jpg" alt="" draggable="false"> </div> 
+                <h2 style="color: green; font-weight:bold;">Family Guy</h2> 
+                <span>In a wacky Rhode Island town, a dysfunctional family...</span> 
+            </li> 
+        </ul> 
+    </div> 
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="java/java.js"></script>
@@ -164,6 +215,12 @@
         document.querySelector('a[href="#TvShows"]').addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector('#TvShows').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        document.querySelector('a[href="#newandpopular"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('#newandpopular').scrollIntoView({
                 behavior: 'smooth'
             });
         });

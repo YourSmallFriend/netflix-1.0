@@ -14,7 +14,7 @@ video{
 }
 .navbar{
     background-color: none !important;
-    position: sticky !important;
+    /* position: sticky !important; */
     top: 0px !important;
     z-index: 1 !important;
 }
@@ -46,7 +46,10 @@ h4{
 }
 
 .wrapper:nth-child(2) {
-    top: 135vh !important;
+    top: 150vh !important;
+}
+.wrapper:nth-child(3) {
+    top: 250vh !important;
 }
 .s1{
     top: 0vh !important;
@@ -125,7 +128,7 @@ h4{
     scroll-snap-align: start !important;
     height: 600px !important;
     list-style: none !important;
-    background: #fff !important;
+    background: #222222 !important;
     display: flex !important;
     cursor: pointer !important;
     width: 90% !important;
