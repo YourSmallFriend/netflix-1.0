@@ -199,6 +199,12 @@ h4{
     .wrapper .carousel {
         grid-auto-columns: 40% !important;
     }
+    .carousel .card{
+        height: 540px !important;
+    }
+    /* .card{
+        padding: 10px;
+    } */
 }
 /*  de after voegt een extra element toe zodat je geen leeg div-je hebt voor alleen clear float gejat van een oud script die ik samen met Tristan heb geschreven*/
 .content:after {
@@ -214,4 +220,9 @@ h4{
     html{
     .content { height: 1% !important; }
     .content { display: block !important; }
+}
+@media screen and (max-width: 460px) {
+    .carousel .card{
+        height: 450px !important;
+    }
 }
