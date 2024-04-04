@@ -38,35 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
         timeoutId = setTimeout(() =>
             carousel.scrollLeft += firstCardWidth, 2500);
     };
-	const videoPlayer = document.querySelector('.video-player');
-	const video = videoPlayer.querySelector('.video');
-	const volume = videoPlayer.querySelector('.volume');
-	const muteButton = videoPlayer.querySelector('.mute-button');
-
-
-    carousel.addEventListener("mousedown", dragStart);
-    carousel.addEventListener("mousemove", dragging);
-    document.addEventListener("mouseup", dragStop);
-    carousel.addEventListener("mouseenter", () =>
-        clearTimeout(timeoutId));
-    carousel.addEventListener("mouseleave", autoPlay);
-
-    arrowBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            carousel.scrollLeft += btn.id === "left" ?
-                -firstCardWidth : firstCardWidth;
-        });
-    });
-	document.addEventListener("DOMContentLoaded", function() {
-		const video = document.getElementById("myVideo");
-		const volume = document.querySelector('.volume');
-		const muteButton = document.getElementById('audio-control');
-	
-		if (!video || !volume || !muteButton) {
-			console.error("Video, volume control, or mute button not found");
-			return;
-		}
-	});
 });
 // langzaam scrollen/tijd voor dat je bent aangekomen bij movies, series of iets anders.
 document.querySelector('a[href="#movies"]').addEventListener('click', function (e) {
