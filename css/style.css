@@ -21,6 +21,9 @@ video{
     min-height: 100vh !important;
     padding: 0 35px !important;
 }
+.navbar-toggler{
+    background-color: rgb(148, 0, 0) !important;
+}
 .navbar{
     background-color: none !important;
     /* position: sticky !important; */
@@ -171,20 +174,30 @@ h4{
     font-size: 1.31rem !important;
     position: relative;
     top: 150px;
+    left: 5px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990.5px) {
     .wrapper .carousel {
-        grid-auto-columns: calc((100% / 2) - 9px) !important;
+        grid-auto-columns: 20% !important;
+    }
+    video{
+        display: none;
+    }
+    .BreakingBad{
+        display: none;
+    }
+    h4{
+        display: none;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
     .wrapper .carousel {
-        grid-auto-columns: 100% !important;
+        grid-auto-columns: 40% !important;
     }
 }
-/*  de after voegt een extra element toe zodat je geen leeg div-je hebt voor alleen clear float*/
+/*  de after voegt een extra element toe zodat je geen leeg div-je hebt voor alleen clear float gejat van een oud script die ik samen met Tristan heb geschreven*/
 .content:after {
     visibility: hidden !important;
     display: block !important;
