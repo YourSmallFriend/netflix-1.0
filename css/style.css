@@ -4,6 +4,10 @@
     display: block;
     margin: 0 auto;
 }
+video{
+    width: 100%; 
+    height: 50%;
+}
 .desc{
     color: white !important;
     font-size: calc(8px + 0.75vw) !important;
@@ -82,7 +86,6 @@ h4{
     cursor: pointer !important;
     float: left !important;
     top: 50% !important;
-    font-size: 1.25rem !important;
     transform: translateY(-50%) !important;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23) !important;
 }
@@ -163,7 +166,7 @@ h4{
 
 .card h2 {
     font-weight: 500 !important;
-    font-size: 1.56rem !important;
+    font-size: calc(12px + 0.85vw) !important;
     margin: 30px 0 5px !important;
     position: relative;
     top: 150px;
@@ -171,7 +174,7 @@ h4{
 
 .card span {
     color: #6a6d78 !important;
-    font-size: 1.31rem !important;
+    font-size: calc(8px + 0.9vw) !important;
     position: relative;
     top: 150px;
     left: 5px;
