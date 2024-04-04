@@ -84,3 +84,49 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 });
+// Smooth scrolling for the "#movies" section
+document.querySelector('a[href="#movies"]').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default link behavior (i.e., jumping to the anchor)
+    smoothScroll('#movies');
+});
+
+// Smooth scrolling for the "#TvShows" section
+document.querySelector('a[href="#TvShows"]').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default link behavior (i.e., jumping to the anchor)
+    smoothScroll('#TvShows');
+});
+
+// Smooth scrolling for the "#newandpopular" section
+document.querySelector('a[href="#newandpopular"]').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default link behavior (i.e., jumping to the anchor)
+    smoothScroll('#newandpopular');
+});
+
+// Function to perform smooth scrolling to a target element
+function smoothScroll(targetSelector) {
+    const targetElement = document.querySelector(targetSelector); // Select the target element to scroll to
+    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset; // Get the absolute position of the target element relative to the viewport
+    const startPosition = window.pageYOffset; // Get the current vertical scroll position of the viewport
+    const distance = targetPosition - startPosition; // Calculate the distance to scroll
+    const duration = 1000; // Duration of the scroll animation in milliseconds
+
+    let startTime = null; // Initialize variable to store the start time of the animation
+
+    // Define animation function
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime; // Set the start time if it's not already set
+        const timeElapsed = currentTime - startTime; // Calculate the elapsed time since the animation started
+        const scrollProgress = Math.min(timeElapsed / duration, 1); // Calculate the progress of the animation (between 0 and 1)
+        const easing = easeOutQuart(scrollProgress); // Apply easing function to the scroll progress
+        window.scrollTo(0, startPosition + distance * easing); // Scroll the viewport to the calculated position
+        if (timeElapsed < duration) requestAnimationFrame(animation); // Continue the animation until the duration is reached
+    }
+
+    // Define easing function (easeOutQuart)
+    function easeOutQuart(t) {
+        return 1 - (--t) * t * t * t; // Quartic easing function for smooth acceleration and deceleration
+    }
+
+    // Start the animation by calling the animation function
+    requestAnimationFrame(animation);
+}
