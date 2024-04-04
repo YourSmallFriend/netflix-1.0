@@ -81,6 +81,10 @@ document.querySelector('a[href="#newandpopular"]').addEventListener('click', fun
     e.preventDefault();
     smoothScroll('#newandpopular');
 });
+document.querySelector('a[href="#MyList"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    smoothScroll('#MyList');
+});
 
 // functie van het scrollen naar de kaarten ig
 function smoothScroll(targetSelector) {

@@ -9,21 +9,21 @@ video{
     height: 50%;
 }
 .desc{
-    color: white !important;
-    font-size: calc(8px + 0.75vw) !important;
+    color: white;
+    font-size: calc(8px + 0.75vw);
 }
 .BreakingBad{
-    position: relative !important;
+    position: relative;
     bottom: 200px;
     left: 2%;
 }
 .body2 {
-    position: relative !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-height: 100vh !important;
-    padding: 0 35px !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 35px;
 }
 .navbar-toggler{
     background-color: rgb(148, 0, 0) !important;
@@ -33,6 +33,16 @@ video{
     /* position: sticky !important; */
     top: 0px !important;
     z-index: 1 !important;
+}
+.navbar-brand2{
+    display: none;
+    position: relative;
+    right: 40%;
+    text-decoration: none;
+}
+.navbar-brand3{
+    display: none;
+    text-decoration: none;
 }
 .collapse{
     margin-left: 20px !important;
@@ -44,9 +54,9 @@ video{
     color: rgb(255, 255, 255) !important;
 }
 h1{
-    color: white !important;
+    color: white;
 }
-h4{
+.navbar-brand{
     color: rgb(240, 0, 0) !important;
 }
 .wrapper {
@@ -58,23 +68,19 @@ h4{
 }
 
 .wrapper:first-child {
-    top: 50vh !important;
+    top: 50vh;
 }
-
 .wrapper:nth-child(2) {
-    top: 150vh !important;
+    top: 150vh;
 }
 .wrapper:nth-child(3) {
-    top: 250vh !important;
+    top: 250vh;
 }
-.s1{
-    top: 0vh !important;
-}
-.s2{
-    top: 50vh !important;
+.wrapper:nth-child(4) {
+    top: 350vh;
 }
 .avatar{
-    left: 32px !important;
+    left: 32px;
 }
 .wrapper i {
     height: 50px !important;
@@ -121,22 +127,22 @@ h4{
     background: #333333;
 }
 .carousel :where(.card, .img) {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
 .carousel.dragging {
-    scroll-snap-type: none !important;
-    scroll-behavior: auto !important;
+    scroll-snap-type: none;
+    scroll-behavior: auto;
 }
 
 .carousel.no-transition {
-    scroll-behavior: auto !important;
+    scroll-behavior: auto;
 }
 
 .carousel.dragging .card {
-    cursor: grab !important;
-    user-select: none !important;
+    cursor: grab;
+    user-select: none;
 }
 
 .carousel .card {
@@ -190,8 +196,16 @@ h4{
     .BreakingBad{
         display: none;
     }
-    h4{
+    .navbar-brand{
         display: none;
+    }
+    .navbar-brand2{
+        display: block;
+        color: rgb(240, 0, 0);
+    }
+    .navbar-brand3{
+        display: block;
+        color: rgb(240, 0, 0);
     }
 }
 
@@ -202,24 +216,6 @@ h4{
     .carousel .card{
         height: 540px !important;
     }
-    /* .card{
-        padding: 10px;
-    } */
-}
-/*  de after voegt een extra element toe zodat je geen leeg div-je hebt voor alleen clear float gejat van een oud script die ik samen met Tristan heb geschreven*/
-.content:after {
-    visibility: hidden !important;
-    display: block !important;
-    font-size: 0 !important;
-    content: " " !important;
-    clear: both !important;
-    height: 0 !important;
-    } .content {
-    display: inline-block !important;
-    } 
-    html{
-    .content { height: 1% !important; }
-    .content { display: block !important; }
 }
 @media screen and (max-width: 460px) {
     .carousel .card{
