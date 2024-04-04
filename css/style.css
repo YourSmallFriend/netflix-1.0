@@ -6,7 +6,7 @@ video{
 }
 .desc{
     color: white !important;
-    font-size: calc(12px + 0.70vw) !important;
+    font-size: calc(8px + 0.75vw) !important;
 }
 .BreakingBad{
     position: relative !important;

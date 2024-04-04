@@ -66,67 +66,44 @@ document.addEventListener("DOMContentLoaded", function() {
 			console.error("Video, volume control, or mute button not found");
 			return;
 		}
-	
-		// Volume
-		volume.addEventListener('input', (e) => {
-			video.volume = e.target.value;
-		});
-	
-		// Mute button
-		muteButton.addEventListener('click', () => {
-			if (video.muted) {
-				video.muted = false;
-				muteButton.textContent = 'Mute';
-			} else {
-				video.muted = true;
-				muteButton.textContent = 'Unmute';
-			}
-		});
 	});
 });
-// Smooth scrolling for the "#movies" section
+// langzaam scrollen/tijd voor dat je bent aangekomen bij movies, series of iets anders.
 document.querySelector('a[href="#movies"]').addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default link behavior (i.e., jumping to the anchor)
+    e.preventDefault(); // zorgt dat die niet het default ding doet van het instant snappen naar het ding.
     smoothScroll('#movies');
 });
-
-// Smooth scrolling for the "#TvShows" section
 document.querySelector('a[href="#TvShows"]').addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default link behavior (i.e., jumping to the anchor)
+    e.preventDefault();
     smoothScroll('#TvShows');
 });
-
-// Smooth scrolling for the "#newandpopular" section
 document.querySelector('a[href="#newandpopular"]').addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default link behavior (i.e., jumping to the anchor)
+    e.preventDefault();
     smoothScroll('#newandpopular');
 });
 
-// Function to perform smooth scrolling to a target element
+// functie van het scrollen naar de kaarten ig
 function smoothScroll(targetSelector) {
-    const targetElement = document.querySelector(targetSelector); // Select the target element to scroll to
-    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset; // Get the absolute position of the target element relative to the viewport
-    const startPosition = window.pageYOffset; // Get the current vertical scroll position of the viewport
-    const distance = targetPosition - startPosition; // Calculate the distance to scroll
-    const duration = 1000; // Duration of the scroll animation in milliseconds
+    const targetElement = document.querySelector(targetSelector); // Selecteerd het ding waar die naar toe moet scrollen
+    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset; //pakt de absolute positie van het scerm/viewport 
+    const startPosition = window.pageYOffset; //pakt het vertikale hoogte van het scherm
+    const distance = targetPosition - startPosition; // berekend de aftand van het scrollen 
+    const duration = 1000; //spreekt voor zichzelf 
 
-    let startTime = null; // Initialize variable to store the start time of the animation
+    let startTime = null; 
 
-    // Define animation function
+    // animatie functie
     function animation(currentTime) {
-        if (startTime === null) startTime = currentTime; // Set the start time if it's not already set
-        const timeElapsed = currentTime - startTime; // Calculate the elapsed time since the animation started
-        const scrollProgress = Math.min(timeElapsed / duration, 1); // Calculate the progress of the animation (between 0 and 1)
-        const easing = easeOutQuart(scrollProgress); // Apply easing function to the scroll progress
+        if (startTime === null) startTime = currentTime; // zet de tijd als dat al niet gedaan was
+        const timeElapsed = currentTime - startTime; // berekent de tijd van waneer de animatie was gestart tot nu
+        const scrollProgress = Math.min(timeElapsed / duration, 1);
+        const easing = easeOutQuart(scrollProgress);
         window.scrollTo(0, startPosition + distance * easing); // Scroll the viewport to the calculated position
-        if (timeElapsed < duration) requestAnimationFrame(animation); // Continue the animation until the duration is reached
+        if (timeElapsed < duration) requestAnimationFrame(animation); // laat de animatei doorgaan tot dat die klaar is 
     }
 
-    // Define easing function (easeOutQuart)
     function easeOutQuart(t) {
-        return 1 - (--t) * t * t * t; // Quartic easing function for smooth acceleration and deceleration
+        return 1 - (--t) * t * t * t; // een ease out functie die er voor zorgt dat het niet op een te snelle of lamzame manier start of eindigt, het is kut om uit te leggen. het zorgt voor een smooth acceleration and deceleration.
     }
-
-    // Start the animation by calling the animation function
     requestAnimationFrame(animation);
 }
