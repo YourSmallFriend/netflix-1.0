@@ -1,4 +1,4 @@
-video{
+.VidPlayer{
     width: 72.5%;
     height: auto;
     display: block;
@@ -10,8 +10,8 @@ video{
 }
 .BreakingBad{
     position: relative !important;
-    bottom: 25vh;
-    left: 15vw;
+    bottom: 200px;
+    left: 2%;
 }
 .body2 {
     position: relative !important;
