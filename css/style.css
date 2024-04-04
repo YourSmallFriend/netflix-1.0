@@ -221,4 +221,16 @@ h1{
     .carousel .card{
         height: 450px !important;
     }
+    .wrapper:first-child {
+        top: 40vh;
+    }
+    .wrapper:nth-child(2) {
+        top: 110vh;
+    }
+    .wrapper:nth-child(3) {
+        top: 180vh;
+    }
+    .wrapper:nth-child(4) {
+        top: 250vh;
+    }
 }
